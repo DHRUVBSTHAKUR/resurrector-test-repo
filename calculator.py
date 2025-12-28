@@ -1,6 +1,8 @@
-def add_numbers(a, b):
-    return a + b
+import requests # 🚨 The agent needs to detect this is missing!
 
-# BUG: Missing a closing parenthesis and using an undefined variable
-print("The result is: " + str(add_numbers(5, 10))
-API_KEY = "AIzaSyAbC123456789"
+def get_math_fact():
+    # This will fail in the sandbox because 'requests' is not installed
+    response = requests.get("http://numbersapi.com/42/math")
+    return response.text
+
+print(get_math_fact())

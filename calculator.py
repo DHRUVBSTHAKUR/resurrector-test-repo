@@ -1,8 +1,8 @@
-import requests # 🚨 The agent needs to detect this is missing!
+import requests # 🚨 This is not in requirements.txt!
 
-def get_math_fact():
-    # This will fail in the sandbox because 'requests' is not installed
-    response = requests.get("http://numbersapi.com/42/math")
-    return response.text
+def fetch_data():
+    # This will fail in the sandbox until the agent "Heals" it
+    r = requests.get("https://api.github.com")
+    return r.status_code
 
-print(get_math_fact())
+print(f"Status: {fetch_data()}")

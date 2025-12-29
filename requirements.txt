@@ -1,2 +1,6 @@
 
 requests
+requests
+pandas
+requests
+pandas
